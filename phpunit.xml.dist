@@ -15,9 +15,9 @@
         </include>
     </source>
     <php>
-        <!-- Fast default: Testbench's in-memory SQLite connection. Override DB_CONNECTION=mariadb
-             (host, port and credentials come from the environment) to run against MariaDB. -->
-        <env name="DB_CONNECTION" value="testing"/>
+        <!-- Tests run on a real MariaDB. Host, port and credentials come from the environment
+             (DDEV's web_environment locally, the service container in CI). -->
+        <env name="DB_CONNECTION" value="mariadb"/>
         <!-- Tests never touch the development database: the name is forced. -->
         <env name="DB_DATABASE" value="testing" force="true"/>
         <env name="CACHE_STORE" value="array"/>

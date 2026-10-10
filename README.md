@@ -33,9 +33,9 @@ is `@internal`.
 composer test
 ```
 
-The default run uses in-memory SQLite. Run against MariaDB with
-`DB_CONNECTION=mariadb` (host and credentials from your environment). Tests always
-use a database named `testing`, never your development database.
+Tests run against a real MariaDB, never SQLite, so engine behaviour (FULLTEXT,
+`ONLY_FULL_GROUP_BY`, collation) matches production. Host and credentials come from
+your environment; the database is always named `testing`, never your development one.
 
 ## Local development (DDEV)
 

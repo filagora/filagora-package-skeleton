@@ -11,7 +11,11 @@ database:
     version: "11.4"
 use_dns_when_possible: true
 composer_version: "2"
-web_environment: []
+web_environment:
+    - DB_HOST=db
+    - DB_PORT=3306
+    - DB_USERNAME=db
+    - DB_PASSWORD=db
 nodejs_version: "24"
 corepack_enable: false
 
