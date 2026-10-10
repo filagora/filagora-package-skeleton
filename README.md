@@ -1,0 +1,1 @@
+# forumkit-package-skeleton
