@@ -1,8 +1,31 @@
 # ForumKit Example
 
 Template for ForumKit packages: a Laravel 13 / Filament 5 plugin with Pest tests,
-Larastan, Pint and shared CI. Create a new package by copying this repository,
-then rename the namespace, package name, config file and plugin id.
+Larastan, Pint and shared CI. It is not a package to install; copy it to start a new one.
+
+## Creating a package from this template
+
+1. **Copy the tracked files** into the new, empty repository, using the list git gives you
+   (replace `../new-package` with its path):
+
+   ```bash
+   git ls-files -z | xargs -0 cp --parents -t ../new-package
+   ```
+
+   Do not archive or sync the directory: `git archive` honours the export-ignore rules and
+   drops `.ddev`, `.github` and `tests`, and copying the directory also copies untracked local
+   files such as DDEV's TLS certificates. Then replace the copied `README.md` with your own.
+2. **Rename the placeholders**: the `ForumKit\Example` namespace, `PackageServiceProvider`,
+   `PackagePlugin`, `config/forumkit-example.php`, the plugin id, the `FORUMKIT_EXAMPLE_`
+   environment prefix, the Composer name (`zcwilt/forumkit-example`) and the DDEV project name
+   in `.ddev/config.yaml`. Add the packages it depends on to `composer.json`.
+3. **Start DDEV**: `ddev start`, then `ddev restart` once (the hook that creates the `testing`
+   database only runs on a restart of a newly configured project), then `ddev composer install`.
+4. **Add the `LEAK_PATTERNS` secret** to the new repository (CI's leak scan reads it).
+5. **Push the first commit** to `master`, wait for CI to go green, then protect `master`: pull
+   request required, the CI checks required, no force-push or deletion, squash merges only.
+6. **Release**: add a `## [x.y.z] - date` section to `CHANGELOG.md`, tag `vx.y.z` (the tag
+   creates the GitHub release), then submit the repository to Packagist.
 
 ## Install
 
@@ -10,6 +33,8 @@ then rename the namespace, package name, config file and plugin id.
 composer require zcwilt/forumkit-example
 php artisan vendor:publish --tag=forumkit-example-config
 ```
+
+(Placeholders: replace the package name, tag and class with your own.)
 
 Register the plugin on a Filament panel:
 
