@@ -7,7 +7,7 @@ then rename the namespace, package name, config file and plugin id.
 ## Install
 
 ```bash
-composer require zencart/forumkit-example
+composer require zcwilt/forumkit-example
 php artisan vendor:publish --tag=forumkit-example-config
 ```
 
