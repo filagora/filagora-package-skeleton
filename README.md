@@ -1,6 +1,6 @@
-# ForumKit Example
+# Filagora Example
 
-Template for ForumKit packages: a Laravel 13 / Filament 5 plugin with Pest tests,
+Template for Filagora packages: a Laravel 13 / Filament 5 plugin with Pest tests,
 Larastan, Pint and shared CI. It is not a package to install; copy it to start a new one.
 
 ## Creating a package from this template
@@ -15,9 +15,9 @@ Larastan, Pint and shared CI. It is not a package to install; copy it to start a
    Do not archive or sync the directory: `git archive` honours the export-ignore rules and
    drops `.ddev`, `.github` and `tests`, and copying the directory also copies untracked local
    files such as DDEV's TLS certificates. Then replace the copied `README.md` with your own.
-2. **Rename the placeholders**: the `ForumKit\Example` namespace, `PackageServiceProvider`,
-   `PackagePlugin`, `config/forumkit-example.php`, the plugin id, the `FORUMKIT_EXAMPLE_`
-   environment prefix, the Composer name (`zcwilt/forumkit-example`) and the DDEV project name
+2. **Rename the placeholders**: the `Filagora\Example` namespace, `PackageServiceProvider`,
+   `PackagePlugin`, `config/filagora-example.php`, the plugin id, the `FILAGORA_EXAMPLE_`
+   environment prefix, the Composer name (`filagora/filagora-example`) and the DDEV project name
    in `.ddev/config.yaml`. Add the packages it depends on to `composer.json`.
 3. **Start DDEV**: `ddev start`, then `ddev restart` once (the hook that creates the `testing`
    database only runs on a restart of a newly configured project), then `ddev composer install`.
@@ -30,8 +30,8 @@ Larastan, Pint and shared CI. It is not a package to install; copy it to start a
 ## Install
 
 ```bash
-composer require zcwilt/forumkit-example
-php artisan vendor:publish --tag=forumkit-example-config
+composer require filagora/filagora-example
+php artisan vendor:publish --tag=filagora-example-config
 ```
 
 (Placeholders: replace the package name, tag and class with your own.)
@@ -39,13 +39,13 @@ php artisan vendor:publish --tag=forumkit-example-config
 Register the plugin on a Filament panel:
 
 ```php
-->plugin(\ForumKit\Example\PackagePlugin::make())
+->plugin(\Filagora\Example\PackagePlugin::make())
 ```
 
 ## Configuration
 
-`config/forumkit-example.php` is merged with the host's copy, so list only what
-differs. Environment variables are prefixed `FORUMKIT_`.
+`config/filagora-example.php` is merged with the host's copy, so list only what
+differs. Environment variables are prefixed `FILAGORA_`.
 
 ## Extending
 

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ForumKit\Example\Tests;
+namespace Filagora\Example\Tests;
 
-use ForumKit\Example\PackageServiceProvider;
+use Filagora\Example\PackageServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra

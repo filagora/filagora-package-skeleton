@@ -1,6 +1,6 @@
 {
-    "name": "zcwilt/forumkit-example",
-    "description": "Template for ForumKit packages.",
+    "name": "filagora/filagora-example",
+    "description": "Template for Filagora packages.",
     "type": "library",
     "license": "MIT",
     "keywords": ["laravel", "filament", "filament-plugin", "forum"],
@@ -17,12 +17,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ForumKit\\Example\\": "src/"
+            "Filagora\\Example\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ForumKit\\Example\\Tests\\": "tests/"
+            "Filagora\\Example\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -33,7 +33,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ForumKit\\Example\\PackageServiceProvider"
+                "Filagora\\Example\\PackageServiceProvider"
             ]
         }
     },

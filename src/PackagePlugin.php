@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ForumKit\Example;
+namespace Filagora\Example;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
@@ -16,7 +16,7 @@ class PackagePlugin implements Plugin
 
     public function getId(): string
     {
-        return 'forumkit-example';
+        return 'filagora-example';
     }
 
     public function register(Panel $panel): void
