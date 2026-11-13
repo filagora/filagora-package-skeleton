@@ -14,7 +14,10 @@ Larastan, Pint and shared CI. It is not a package to install; copy it to start a
 
    Do not archive or sync the directory: `git archive` honours the export-ignore rules and
    drops `.ddev`, `.github` and `tests`, and copying the directory also copies untracked local
-   files such as DDEV's TLS certificates. Then replace the copied `README.md` with your own.
+   files such as DDEV's TLS certificates. Then replace the copied `README.md` with your own,
+   keeping its sections in this order: What it provides, Requirements, Install, Configuration,
+   Extending, Testing, Local development (DDEV), Licence. The docs site builds the package's
+   page from the README, so every package reads the same way.
 2. **Rename the placeholders**: the `Filagora\Example` namespace, `PackageServiceProvider`,
    `PackagePlugin`, `config/filagora-example.php`, the plugin id, the `FILAGORA_EXAMPLE_`
    environment prefix, the Composer name (`filagora/filagora-example`) and the DDEV project name
@@ -26,6 +29,16 @@ Larastan, Pint and shared CI. It is not a package to install; copy it to start a
    request required, the CI checks required, no force-push or deletion, squash merges only.
 6. **Release**: add a `## [x.y.z] - date` section to `CHANGELOG.md`, tag `vx.y.z` (the tag
    creates the GitHub release), then submit the repository to Packagist.
+
+## What it provides
+
+Say what the package gives a host: the tables, services, commands, events and Filament
+screens it adds. Put longer topics (how it works, who sees what) under `###` headings here.
+
+## Requirements
+
+PHP 8.4, Laravel 13 and Filament 5. Tested against MariaDB 11.4. List the Filagora packages
+it requires, linked to their repositories.
 
 ## Install
 
