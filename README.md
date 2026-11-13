@@ -32,8 +32,35 @@ Larastan, Pint and shared CI. It is not a package to install; copy it to start a
 
 ## What it provides
 
-Say what the package gives a host: the tables, services, commands, events and Filament
-screens it adds. Put longer topics (how it works, who sees what) under `###` headings here.
+Every package uses the same sub-sections here, in this order. When a package has none of
+something, keep the heading and say so in one line.
+
+### Overview
+
+One sentence on what the package gives a host. Use the `description` from `composer.json`.
+
+### Tables
+
+The tables the package creates (unprefixed names; `filagora_` is the default prefix), and
+`php artisan filagora:adopt` for a site that already has them.
+
+### Commands
+
+A table of the package's Artisan commands: the signature and what it does.
+
+### Events
+
+The events the package fires, one line each.
+
+### Access
+
+A table of the Gate abilities the package defines and the entitlement key each maps to by
+default (the `gates` array in its config).
+
+### Using it
+
+Everything else: how to use the package, in `####` topics. Keep the detail here, not in the
+sections above.
 
 ## Requirements
 
